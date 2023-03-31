@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Me Live Code</title>
-  <link rel="stylesheet" href="style.css" >
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <header>
     <nav>
@@ -22,41 +20,39 @@
   <main>
     <section>
       <h2>Attractions</h2>
+      <form>
+        <label for="price">Price Range:</label>
+        <select id="price" name="price">
+          <option value="all">All Prices</option>
+          <option value="low">Low (Less than $50)</option>
+          <option value="medium">Medium ($50-$100)</option>
+          <option value="high">High (More than $100)</option>
+        </select>
+        <button type="submit" aria-label="Press to filter attractions">Filter</button>
+      </form>
       <div class="grid-container">
-        <article class="card">
+        <article class="card" data-price="medium">
           <img src="https://www.melivecode.com/attractions/1.jpg" alt="Phi Phi Islands" style="width:100%">
           <div class="container">
             <h3><strong>Phi Phi Islands</strong></h3>
-            <p>Phi Phi Islands are a group of islands in Thailand between the large island of Phuket and the Malacca
-              Coastal Strait of Thailand.</p>
+            <p>Phi Phi Islands are a group of islands in Thailand between the large island of Phuket and the Malacca Coastal Strait of Thailand.</p>
             <button aria-label="Press to read more about Phi Phi Islands">Read more</button>
           </div>
         </article>
-        <article class="card">
+        <article class="card" data-price="high">
           <img src="https://www.melivecode.com/attractions/2.jpg" alt="Eiffel Tower" style="width:100%">
           <div class="container">
             <h3><strong>Eiffel Tower</strong></h3>
-            <p>Eiffel Tower is one of the most famous structures in the world. Eiffel Tower is named after a leading
-              French architect and engineer. It was built as a symbol of the World Fair in 1889.</p>
+            <p>Eiffel Tower is one of the most famous structures in the world. Eiffel Tower is named after a leading French architect and engineer. It was built as a symbol of the World Fair in 1889.</p>
             <button aria-label="Press to read more about Phi Phi Islands">Read more</button>
           </div>
         </article>
-        <article class="card">
+        <article class="card" data-price="low">
           <img src="https://www.melivecode.com/attractions/3.jpg" alt="Times Square" style="width:100%">
           <div class="container">
             <h3><strong>Times Square</strong></h3>
-            <p>Times Square has become a global landmark and has become a symbol of New York City. This is a result of
-              Times Square being a modern, futuristic venue, with huge advertising screens dotting its surroundings.</p>
+            <p>Times Square has become a global landmark and has become a symbol of New York City. This is a result of Times Square being a modern, futuristic venue, with huge advertising screens dotting its surroundings.</p>
             <button aria-label="Press to read more about Phi Phi Islands">Read more</button>
           </div>
         </article>
       </div>
-    </section>
-    <section>
-      <h2>Contact Me Live Code</h2>
-      <h3>Send and email to melivecode@gmail.com</h3>
-    </section>
-  </main>
-</body>
-
-</html>
