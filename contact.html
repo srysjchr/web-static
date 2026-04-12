@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with the Me Live Code team. We'd love to hear from you." />
+  <meta property="og:title" content="Contact – Me Live Code" />
+  <meta property="og:description" content="Reach out to us with questions, stories, or partnership enquiries." />
+  <meta property="og:type" content="website" />
+  <title>Contact – Me Live Code</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="./index.html" class="site-logo">Me<span>Live</span>Code</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./articles.html">Articles</a></li>
+          <li><a href="./contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main id="main-content">
+    <section class="section" aria-labelledby="contact-title">
+      <div class="container">
+
+        <header class="section-header">
+          <p class="section-eyebrow">Get in Touch</p>
+          <h1 class="section-title" id="contact-title">Contact Us</h1>
+          <p class="section-subtitle">Have a question, story idea, or partnership enquiry? We'd love to hear from you.</p>
+        </header>
+
+        <div class="contact-layout">
+
+          <!-- ===== LEFT: contact info ===== -->
+          <div class="contact-info">
+            <h3>We'd love to hear from you</h3>
+            <p>Whether you're planning your next trip, have a tip to share, or simply want to say hello — our team is here and happy to connect. Expect a reply within one business day.</p>
+
+            <div class="contact-details">
+
+              <div class="contact-detail">
+                <div class="contact-detail-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                    <circle cx="12" cy="9" r="2.5"/>
+                  </svg>
+                </div>
+                <div class="contact-detail-body">
+                  <strong>Location</strong>
+                  <span>Bangkok, Thailand</span>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-detail-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                    <path d="M2 7l10 7 10-7"/>
+                  </svg>
+                </div>
+                <div class="contact-detail-body">
+                  <strong>Email</strong>
+                  <span>hello@melivecode.com</span>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="contact-detail-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <div class="contact-detail-body">
+                  <strong>Office Hours</strong>
+                  <span>Mon–Fri, 9am–6pm ICT</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ===== RIGHT: form ===== -->
+          <div class="form-card">
+            <form id="contact-form" novalidate aria-label="Contact form">
+
+              <div class="form-group" id="group-name">
+                <label for="name">Name <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Your full name"
+                       autocomplete="name" required minlength="2" />
+                <span class="form-error" id="name-error" role="alert">Please enter your name (at least 2 characters).</span>
+              </div>
+
+              <div class="form-group" id="group-email">
+                <label for="email">Email <span class="required" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="you@example.com"
+                       autocomplete="email" required />
+                <span class="form-error" id="email-error" role="alert">Please enter a valid email address.</span>
+              </div>
+
+              <div class="form-group" id="group-subject">
+                <label for="subject">Subject <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="subject" name="subject" placeholder="What's this about?"
+                       required minlength="3" />
+                <span class="form-error" id="subject-error" role="alert">Please enter a subject (at least 3 characters).</span>
+              </div>
+
+              <div class="form-group" id="group-message">
+                <label for="message">Message <span class="required" aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" rows="6"
+                          placeholder="Tell us what's on your mind…" required minlength="10"></textarea>
+                <span class="form-error" id="message-error" role="alert">Please enter a message (at least 10 characters).</span>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary" id="submit-btn">Send Message</button>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="./index.html" class="footer-logo">Me<span>Live</span>Code</a>
+          <p class="footer-desc">Curating extraordinary travel experiences and inspiring journeys for adventurers worldwide.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./articles.html">Articles</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Discover</h4>
+          <ul>
+            <li><a href="./index.html#attractions">Top Attractions</a></li>
+            <li><a href="./articles.html">Travel Tips</a></li>
+            <li><a href="./articles.html">Adventure</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MeLiveCode. All rights reserved.</p>
+        <p>Built with semantic HTML, CSS &amp; vanilla JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+         aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <!-- Toast container -->
+  <div class="toast-container" id="toast-container" aria-live="assertive" aria-atomic="true"></div>
+
+  <script>
+  /* ===== HAMBURGER NAV ===== */
+  (function () {
+    const toggle = document.getElementById('nav-toggle');
+    const nav    = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+
+    toggle.addEventListener('click', function () {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('is-open', !expanded);
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+        toggle.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('is-open');
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        toggle.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('is-open');
+      }
+    });
+  }());
+
+  /* ===== SCROLL TO TOP ===== */
+  (function () {
+    const btn = document.getElementById('scroll-top');
+    if (!btn) return;
+
+    window.addEventListener('scroll', function () {
+      btn.classList.toggle('is-visible', window.scrollY > 400);
+    }, { passive: true });
+
+    btn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }());
+
+  /* ===== CONTACT FORM VALIDATION & TOAST ===== */
+  (function () {
+    var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    /* --- Toast helper --- */
+    function createToast(message, type) {
+      var container = document.getElementById('toast-container');
+      if (!container) return;
+
+      var iconMap = {
+        success: '<svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>',
+        error:   '<svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>',
+        info:    '<svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>'
+      };
+
+      var toast = document.createElement('div');
+      toast.className = 'toast toast-' + (type || 'info');
+      toast.innerHTML = (iconMap[type] || iconMap.info) + '<span>' + message + '</span>';
+      container.appendChild(toast);
+
+      setTimeout(function () {
+        toast.classList.add('is-leaving');
+        toast.addEventListener('animationend', function () { toast.remove(); }, { once: true });
+      }, 4000);
+    }
+
+    /* --- Field validators --- */
+    function validateField(id) {
+      var field  = document.getElementById(id);
+      var group  = document.getElementById('group-' + id);
+      var error  = document.getElementById(id + '-error');
+      if (!field || !group) return true;
+
+      var valid = false;
+      switch (id) {
+        case 'name':    valid = field.value.trim().length >= 2; break;
+        case 'email':   valid = EMAIL_RE.test(field.value.trim()); break;
+        case 'subject': valid = field.value.trim().length >= 3; break;
+        case 'message': valid = field.value.trim().length >= 10; break;
+        default:        valid = field.value.trim().length > 0;
+      }
+
+      field.classList.toggle('is-invalid', !valid);
+      field.classList.toggle('is-valid', valid);
+      group.classList.toggle('has-error', !valid);
+      if (error) error.style.display = valid ? 'none' : 'block';
+      return valid;
+    }
+
+    var fields = ['name', 'email', 'subject', 'message'];
+
+    /* Wire blur listeners */
+    fields.forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('blur', function () { validateField(id); });
+        el.addEventListener('input', function () {
+          /* Clear error state on typing if field was already invalid */
+          if (el.classList.contains('is-invalid')) validateField(id);
+        });
+      }
+    });
+
+    /* --- Form submit --- */
+    var form      = document.getElementById('contact-form');
+    var submitBtn = document.getElementById('submit-btn');
+    if (!form || !submitBtn) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var allValid = fields.map(validateField).every(Boolean);
+
+      if (!allValid) {
+        var firstInvalid = form.querySelector('.is-invalid');
+        if (firstInvalid) firstInvalid.focus();
+        createToast('Please fix the errors above.', 'error');
+        return;
+      }
+
+      /* Show loading state */
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+
+      setTimeout(function () {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+        form.reset();
+        fields.forEach(function (id) {
+          var el = document.getElementById(id);
+          var group = document.getElementById('group-' + id);
+          if (el) { el.classList.remove('is-valid', 'is-invalid'); }
+          if (group) { group.classList.remove('has-error'); }
+        });
+        createToast("Message sent! We'll be in touch soon.", 'success');
+      }, 1200);
+    });
+  }());
+  </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Read the latest travel articles, tips, and adventure guides from Me Live Code." />
+  <meta property="og:title" content="Articles – Me Live Code" />
+  <meta property="og:description" content="Travel tips, cultural guides, and adventure stories curated for explorers." />
+  <meta property="og:type" content="website" />
+  <title>Articles – Me Live Code</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="./index.html" class="site-logo">Me<span>Live</span>Code</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./articles.html" aria-current="page">Articles</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main id="main-content">
+    <section class="section" aria-labelledby="articles-title">
+      <div class="container">
+
+        <header class="section-header">
+          <p class="section-eyebrow">Latest Posts</p>
+          <h1 class="section-title" id="articles-title">Articles</h1>
+          <p class="section-subtitle">Insights, tips, and stories to fuel your wanderlust and help you travel smarter.</p>
+        </header>
+
+        <div class="grid">
+
+          <!-- Article 1 -->
+          <article class="article-card">
+            <div class="article-meta">
+              <span class="article-tag">Travel Tips</span>
+              <time class="article-date" datetime="2026-03-15">March 15, 2026</time>
+            </div>
+            <h2 class="article-title">10 Hidden Gems in Southeast Asia</h2>
+            <p class="article-excerpt">Beyond Bangkok and Bali lie extraordinary destinations that most tourists overlook. From the karst-studded rivers of northern Vietnam to the secret beaches of southern Philippines, these under-the-radar spots promise authentic experiences without the crowds.</p>
+            <div class="article-footer">
+              <div class="article-author">
+                <div class="avatar" aria-hidden="true">JS</div>
+                <div class="author-info">
+                  <span class="author-name">Jane Smith</span>
+                  <span class="read-time">5 min read</span>
+                </div>
+              </div>
+              <a href="./contact.html" class="btn btn-primary">Read more →</a>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="article-card">
+            <div class="article-meta">
+              <span class="article-tag">Culture</span>
+              <time class="article-date" datetime="2026-02-28">February 28, 2026</time>
+            </div>
+            <h2 class="article-title">A Guide to Visiting Paris on a Budget</h2>
+            <p class="article-excerpt">The City of Light doesn't have to drain your wallet. With free museum days, picnics along the Seine, and affordable neighbourhood bistros tucked away from tourist hotspots, a memorable Parisian escape is well within reach for budget travellers.</p>
+            <div class="article-footer">
+              <div class="article-author">
+                <div class="avatar" aria-hidden="true">MR</div>
+                <div class="author-info">
+                  <span class="author-name">Mark Rivera</span>
+                  <span class="read-time">7 min read</span>
+                </div>
+              </div>
+              <a href="./contact.html" class="btn btn-primary">Read more →</a>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="article-card">
+            <div class="article-meta">
+              <span class="article-tag">Adventure</span>
+              <time class="article-date" datetime="2026-01-10">January 10, 2026</time>
+            </div>
+            <h2 class="article-title">Top 5 Extreme Experiences Around the World</h2>
+            <p class="article-excerpt">For those who crave a rush of adrenaline, the world offers no shortage of jaw-dropping challenges. From free-diving in the blue holes of the Bahamas to paragliding over the Swiss Alps, these experiences will push your limits and redefine what's possible.</p>
+            <div class="article-footer">
+              <div class="article-author">
+                <div class="avatar" aria-hidden="true">AL</div>
+                <div class="author-info">
+                  <span class="author-name">Amy Lee</span>
+                  <span class="read-time">4 min read</span>
+                </div>
+              </div>
+              <a href="./contact.html" class="btn btn-primary">Read more →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="./index.html" class="footer-logo">Me<span>Live</span>Code</a>
+          <p class="footer-desc">Curating extraordinary travel experiences and inspiring journeys for adventurers worldwide.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./articles.html">Articles</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Discover</h4>
+          <ul>
+            <li><a href="./index.html#attractions">Top Attractions</a></li>
+            <li><a href="./articles.html">Travel Tips</a></li>
+            <li><a href="./articles.html">Adventure</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MeLiveCode. All rights reserved.</p>
+        <p>Built with semantic HTML, CSS &amp; vanilla JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+         aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <!-- Toast container -->
+  <div class="toast-container" id="toast-container" aria-live="assertive" aria-atomic="true"></div>
+
+  <script>
+  /* ===== HAMBURGER NAV ===== */
+  (function () {
+    const toggle = document.getElementById('nav-toggle');
+    const nav    = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+
+    toggle.addEventListener('click', function () {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('is-open', !expanded);
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+        toggle.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('is-open');
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        toggle.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('is-open');
+      }
+    });
+  }());
+
+  /* ===== SCROLL TO TOP ===== */
+  (function () {
+    const btn = document.getElementById('scroll-top');
+    if (!btn) return;
+
+    window.addEventListener('scroll', function () {
+      btn.classList.toggle('is-visible', window.scrollY > 400);
+    }, { passive: true });
+
+    btn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }());
+  </script>
+</body>
+</html>
