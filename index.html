@@ -1,78 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Me Live Code</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore iconic world attractions curated for every budget and travel style. Discover your next adventure with Me Live Code." />
+  <meta property="og:title" content="Me Live Code – Explore Attractions" />
+  <meta property="og:description" content="Explore iconic world attractions curated for every budget and travel style." />
+  <meta property="og:type" content="website" />
+  <title>Me Live Code – Explore Attractions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./articles.html">Articles</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="./index.html" class="site-logo">Me<span>Live</span>Code</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="./index.html" aria-current="page">Home</a></li>
+          <li><a href="./articles.html">Articles</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
-    <section>
-      <h2>Attractions</h2>
-      <form>
-        <label for="price">Price Range:</label>
-        <select id="price" name="price">
-          <option value="all">All Prices</option>
-          <option value="low">Low (Less than $50)</option>
-          <option value="medium">Medium ($50-$100)</option>
-          <option value="high">High (More than $100)</option>
-        </select>
-        <button type="submit" aria-label="Press to filter attractions">Filter</button>
-      </form>
-      <div class="grid-container">
-        <article class="card" data-price="medium">
-          <img src="https://www.melivecode.com/attractions/1.jpg" alt="Phi Phi Islands" style="width:100%">
-          <div class="container">
-            <h3><strong>Phi Phi Islands</strong></h3>
-            <p>Phi Phi Islands are a group of islands in Thailand between the large island of Phuket and the Malacca Coastal Strait of Thailand.</p>
-            <button aria-label="Press to read more about Phi Phi Islands">Read more</button>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container">
+      <p class="hero-eyebrow">✦ World Attractions</p>
+      <h1 class="hero-title" id="hero-title">Discover Your Next <em>Adventure</em></h1>
+      <p class="hero-subtitle">Explore iconic destinations curated for every budget and travel style.</p>
+      <div class="hero-actions">
+        <a href="#attractions" class="btn btn-primary">Explore Now</a>
+        <a href="./articles.html" class="btn btn-outline">Read Articles</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN ===== -->
+  <main id="main-content">
+    <section class="section" id="attractions" aria-labelledby="attractions-title">
+      <div class="container">
+
+        <header class="section-header">
+          <p class="section-eyebrow">Featured Destinations</p>
+          <h2 class="section-title" id="attractions-title">Top Attractions</h2>
+          <p class="section-subtitle">Hand-picked landmarks and experiences from around the globe, sorted for every traveller.</p>
+        </header>
+
+        <form class="filter-bar" id="filter-form" role="search" aria-label="Filter attractions by price">
+          <label for="price-filter">Filter by budget:</label>
+          <select id="price-filter" name="price" aria-label="Select price range">
+            <option value="all">All Budgets</option>
+            <option value="low">Low Budget</option>
+            <option value="medium">Medium Budget</option>
+            <option value="high">High Budget</option>
+          </select>
+          <button type="submit" class="btn btn-primary">Filter</button>
+        </form>
+
+        <div class="grid" id="cards-grid" aria-live="polite" aria-label="Attraction cards">
+
+          <!-- Card 1 -->
+          <article class="card" data-price="medium">
+            <div class="card-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&h=400&fit=crop"
+                alt="Eiffel Tower, Paris at golden hour"
+                width="600" height="400" loading="lazy" />
+              <span class="card-badge badge-medium">Medium</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Eiffel Tower, Paris</h3>
+              <p class="card-text">Stand beneath one of the world's most recognised silhouettes. The iron lattice tower offers breathtaking panoramic views across the French capital at every level.</p>
+              <a href="./articles.html" class="btn btn-primary">Read More →</a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card" data-price="high">
+            <div class="card-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?w=600&h=400&fit=crop"
+                alt="Santorini white-washed houses with blue domes overlooking the Aegean Sea"
+                width="600" height="400" loading="lazy" />
+              <span class="card-badge badge-high">High</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Santorini, Greece</h3>
+              <p class="card-text">Perched on volcanic cliffs above the Aegean Sea, Santorini's iconic white-washed architecture and sunset views make it one of Europe's most sought-after destinations.</p>
+              <a href="./articles.html" class="btn btn-primary">Read More →</a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card" data-price="low">
+            <div class="card-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&h=400&fit=crop"
+                alt="Chiang Mai temples and lush greenery in northern Thailand"
+                width="600" height="400" loading="lazy" />
+              <span class="card-badge badge-low">Low</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Chiang Mai, Thailand</h3>
+              <p class="card-text">Surrounded by misty mountains and centuries-old temples, Chiang Mai blends vibrant night markets with serene cultural heritage — perfect for budget-conscious explorers.</p>
+              <a href="./articles.html" class="btn btn-primary">Read More →</a>
+            </div>
+          </article>
+
+          <!-- No results -->
+          <div class="no-results" id="no-results" role="status">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              <line x1="8" y1="11" x2="14" y2="11"/>
+            </svg>
+            <p>No attractions match your filter. Try a different budget.</p>
           </div>
-        </article>
-        <article class="card" data-price="high">
-          <img src="https://www.melivecode.com/attractions/2.jpg" alt="Eiffel Tower" style="width:100%">
-          <div class="container">
-            <h3><strong>Eiffel Tower</strong></h3>
-            <p>Eiffel Tower is one of the most famous structures in the world. Eiffel Tower is named after a leading French architect and engineer. It was built as a symbol of the World Fair in 1889.</p>
-            <button aria-label="Press to read more about Eiffel Tower">Read more</button>
-          </div>
-        </article>
-        <article class="card" data-price="low">
-          <img src="https://www.melivecode.com/attractions/3.jpg" alt="Times Square" style="width:100%">
-          <div class="container">
-            <h3><strong>Times Square</strong></h3>
-            <p>Times Square has become a global landmark and has become a symbol of New York City. This is a result of Times Square being a modern, futuristic venue, with huge advertising screens dotting its surroundings.</p>
-            <button aria-label="Press to read more about Times Square">Read more</button>
-          </div>
-        </article>
+
+        </div>
       </div>
     </section>
   </main>
-  <script>
-    const form = document.querySelector('form');
-    const cards = document.querySelectorAll('.card');
 
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      const selectedPrice = document.getElementById('price').value;
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="./index.html" class="footer-logo">Me<span>Live</span>Code</a>
+          <p class="footer-desc">Curating extraordinary travel experiences and inspiring journeys for adventurers worldwide.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./articles.html">Articles</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Discover</h4>
+          <ul>
+            <li><a href="#attractions">Top Attractions</a></li>
+            <li><a href="./articles.html">Travel Tips</a></li>
+            <li><a href="./articles.html">Adventure</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 MeLiveCode. All rights reserved.</p>
+        <p>Built with semantic HTML, CSS &amp; vanilla JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+         aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <!-- Toast container -->
+  <div class="toast-container" id="toast-container" aria-live="assertive" aria-atomic="true"></div>
+
+  <script>
+  /* ===== HAMBURGER NAV ===== */
+  (function () {
+    const toggle = document.getElementById('nav-toggle');
+    const nav    = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+
+    toggle.addEventListener('click', function () {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('is-open', !expanded);
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+        toggle.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('is-open');
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        toggle.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('is-open');
+      }
+    });
+  }());
+
+  /* ===== PRICE FILTER ===== */
+  (function () {
+    const form    = document.getElementById('filter-form');
+    const select  = document.getElementById('price-filter');
+    const grid    = document.getElementById('cards-grid');
+    const noRes   = document.getElementById('no-results');
+    if (!form || !select || !grid) return;
+
+    function applyFilter() {
+      const value = select.value;
+      const cards = grid.querySelectorAll('.card');
+      let visible = 0;
 
       cards.forEach(function (card) {
-        if (selectedPrice === 'all' || card.dataset.price === selectedPrice) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
+        const price = card.dataset.price;
+        const show  = value === 'all' || price === value;
+        card.classList.toggle('is-hidden', !show);
+        if (show) {
+          visible++;
+          card.classList.remove('is-entering');
+          /* Force reflow to restart animation */
+          void card.offsetWidth;
+          card.classList.add('is-entering');
         }
       });
+
+      if (noRes) {
+        noRes.style.display = visible === 0 ? 'flex' : 'none';
+      }
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      applyFilter();
     });
+
+    select.addEventListener('change', applyFilter);
+  }());
+
+  /* ===== INTERSECTION OBSERVER — card entrance ===== */
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    const cards = document.querySelectorAll('.card');
+    const obs = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-entering');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach(function (card) { obs.observe(card); });
+  }());
+
+  /* ===== SCROLL TO TOP ===== */
+  (function () {
+    const btn = document.getElementById('scroll-top');
+    if (!btn) return;
+
+    window.addEventListener('scroll', function () {
+      btn.classList.toggle('is-visible', window.scrollY > 400);
+    }, { passive: true });
+
+    btn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }());
   </script>
 </body>
 </html>
